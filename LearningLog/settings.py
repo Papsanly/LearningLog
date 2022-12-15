@@ -8,7 +8,7 @@ import django_heroku
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = dotenv_values()['SECRET_KEY']
+SECRET_KEY = "django-insecure-gv3!9z#!@7dl9&d^ksf4^^4#dt&9%bb-hg-o$-uewxhm2)04q8"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
