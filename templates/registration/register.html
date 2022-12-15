@@ -12,7 +12,7 @@
         {% bootstrap_form form %}
         {% buttons %}
             <button name="submit" class="btn btn-primary">Register</button>
-            <input type="hidden" name="next" value="{% url 'learning_logs:index' %}"/>
+            <input type="hidden" name="next" value="{% url 'users:registered' %}"/>
         {% endbuttons %}
     </form>
 

@@ -6,5 +6,6 @@ urlpatterns = [
     # Default url for auth
     path('', include('django.contrib.auth.urls')),
     # Page for registrations
-    path('register/', views.register, name='register')
+    path('register/', views.register, name='register'),
+    path('registered/', views.registered, name='registered')
 ]
