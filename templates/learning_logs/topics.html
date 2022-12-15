@@ -6,16 +6,19 @@
 
 {% block content %}
 
-    <ul>
-        {% for topic in topics %}
-            <li><h3>
-                <a href={% url 'learning_logs:topic' topic.id %}>{{ topic }}</a>
-            </h3></li>
-        {% empty %}
-            <li><h3>No topics have been added yet.</h3></li>
-        {% endfor %}
-    </ul>
 
-    <h3><a href="{% url 'learning_logs:new_topic' %}">Add a new topic</a></h3>
+    {% if topics %}
+        <ul class="list-group mt-3">
+            {% for topic in topics %}
+                <li class="list-group-item"><h3>
+                    <a href={% url 'learning_logs:topic' topic.id %}>{{ topic }}</a>
+                </h3></li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <h3>No topics have been added yet.</h3>
+    {% endif %}
+
+    <a role="button" class="btn btn-primary mt-3" href="{% url 'learning_logs:new_topic' %}">Add a new topic</a>
 
 {% endblock content %}
