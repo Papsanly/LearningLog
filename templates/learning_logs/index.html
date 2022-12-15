@@ -2,15 +2,24 @@
 
 {% block pageheader %}
     <div class="jumbotron">
-        <h1 class="display-3">
-            Track your learning
-        </h1>
-        <p class="lead">
-            Make your own Learning Log, and keep a list of the topics you're learning about. Whenever you learn
-            something new about a topic, make an entry summarizing what you've learned
-        </p>
-        <a class="btn btn-lg btn-primary" href="{% url 'users:register' %}" role="button">
-            Register &raquo;
-        </a>
+        {% if user.is_authenticated %}
+            <h1 class="display-4">
+                Welcome back, {{ user.username }}
+            </h1>
+            <a class="btn btn-lg btn-primary mt-3" href="{% url 'learning_logs:topics' %}" role="button">
+                Get back to work &raquo;
+            </a>
+        {% else %}
+            <h1 class="display-3">
+                Track your learning
+            </h1>
+            <p class="lead">
+                Make your own Learning Log, and keep a list of the topics you're learning about. Whenever you learn
+                something new about a topic, make an entry summarizing what you've learned
+            </p>
+            <a class="btn btn-lg btn-primary" href="{% url 'users:register' %}" role="button">
+                Register &raquo;
+            </a>
+        {% endif %}
     </div>
 {% endblock pageheader %}
