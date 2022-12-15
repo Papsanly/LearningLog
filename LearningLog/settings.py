@@ -20,7 +20,10 @@ INSTALLED_APPS = [
     # Project apps
     'learning_logs',
     'users',
-    
+
+    # Third-party applications
+    'bootstrap4',
+
     # Default apps
     'django.contrib.admin',
     'django.contrib.auth',
