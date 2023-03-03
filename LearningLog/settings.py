@@ -1,7 +1,6 @@
 import os
 from pathlib import Path
 from dotenv import dotenv_values
-import django_heroku
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -121,6 +120,3 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Project settings
 LOGIN_URL = 'users:login'
-
-# Heroku settings
-django_heroku.settings(locals())
